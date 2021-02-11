@@ -15,7 +15,7 @@
 1. Run as root on UDM Pro to download and set permissions of on_boot.d script:
 ```sh
 # Download 10-fixup from GitHub
-curl -L https://raw.githubusercontent.com/lee-staples/udm-utilities/master/container-common/on_boot.d/10-fixup-mDNS.sh -o /mnt/data/on_boot.d/10-fixup-mDNS.sh;
+curl -L https://raw.githubusercontent.com/lee-staples/udm-utilities/fixup-mDNS/10-fixup-mDNS.sh -o /mnt/data/on_boot.d/10-fixup-mDNS.sh;
 # Set execute permission
 chmod a+x /mnt/data/on_boot.d/10-fixup-mDNS.sh;
 ```
