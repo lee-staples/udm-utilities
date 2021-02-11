@@ -35,8 +35,7 @@ podman build . -t snapcast-server
 2. Execute /mnt/data/on_boot.d/[20-snapcast.sh](20-snapcast.sh).
 3. Customise streams [snapserver.conf](snapserver.conf).
 4. Run the snapcast-server podman container.  Mounting sockets dbus and avahi sockets; configuration files snapserver.conf and server.json; publishing ports 1704,1705,1780
-
-running in privileged is only required for mDNS. Also, please change the --dns arguments to whatever was provided by NextDNS.
+   below only publish ports to internal interface 192.168.0.1 customizer as required
 
     ```sh
      podman run --name snapcast --detach --rm \
@@ -44,7 +43,7 @@ running in privileged is only required for mDNS. Also, please change the --dns a
         --volume /var/run/dbus/system_bus_socket:/var/run/dbus/system_bus_socket \
         --volume /mnt/data/snapcast-server/snapserver.conf:/etc/snapserver.conf \
         --volume /mnt/data/snapcast-server/server.json:/root/.config/snapserver/server.json \
-        --publish 1704:1704 --publish 1705:1705 --publish 1780:1780 \
+        --publish 192.168.0.1:1704:1704 --publish 192.168.0.1:1705:1705 --publish 192.168.0.1:1780:1780 \
         snapcast-server
     ```
 
