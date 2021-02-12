@@ -22,7 +22,7 @@ do
 done
 
 ## startup dhcp daemon for bridged CNI
-/opt/cni/bin/dhcp daemon
+/opt/cni/bin/dhcp daemon&
 
 if podman container exists ${CONTAINER}; then
   podman start ${CONTAINER}
