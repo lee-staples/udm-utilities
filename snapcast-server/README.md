@@ -47,6 +47,6 @@ docker buildx build --platform linux/arm64/v8 --tag snapcast-server-udm:latest .
      podman run --detach --name snapcast-server --hostname snapcast-server --net br0 \
         --volume /mnt/data/snapcast-server/snapserver.conf:/etc/snapserver.conf \
         --volume /mnt/data/snapcast-server/server.json:/root/.config/snapserver/server.json \
-        lee-staples/snapcast-server-udm:latest
+        leestaples/snapcast-server-udm:latest
     ```
 6. Connect clients and listen to synchronous audio playback.
