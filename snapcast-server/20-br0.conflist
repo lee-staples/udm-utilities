@@ -1,0 +1,15 @@
+{
+	"cniVersion": "0.4.0",
+		"name": "br0",
+		"plugins": [
+		{
+			"type": "bridge",
+			"bridge": "br0",
+			"isGateway": false,
+			"ipMasq": false,
+			"ipam": {
+				"type": "dhcp"
+			}
+		}
+		]
+}
