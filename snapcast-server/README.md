@@ -27,13 +27,13 @@ The official repo is lee.staples/snapcast-server-udm.  Latest will always refer 
 The Dockerfile is included, you can build it locally on your UDM if you don't want to pull from Docker Hub or make customizations
 
 ```sh
-podman build . -t snapcast-server-udm:latest
+podman build . --tag snapcast-server-udm:latest
 ```
 
 Building from another device is possible.  You must have [buildx](https://github.com/docker/buildx/) and qemu-static-user installed to do cross platform builds. This is useful if you want to mirror to a private repo
 
 ```sh
-docker buildx build --platform linux/arm64/v8 -t snapcast-server-udm:latest .
+docker buildx build --platform linux/arm64/v8 --tag snapcast-server-udm:latest .
 ```
 
 ## Steps
